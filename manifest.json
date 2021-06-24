@@ -1,0 +1,46 @@
+{
+  "name": "涂鸦越权检测工具",
+  "version": "1.0",
+  "author": "ba1ma0@tuya安全实验室",
+  "description": "涂鸦越权检测工具,只要是方便涂鸦内部开发和测试同学进行越权自动检测",
+  "icons": {
+    "16": "images/16.png",
+    "24": "images/24.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png",
+    "256": "images/256.png"
+
+  },
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "js/jquery-3.4.1.min.js",
+      "js/jquery.base64.js",
+      "js/background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "js/jquery-3.4.1.min.js",
+        "js/identify.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}
