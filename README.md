@@ -8,3 +8,6 @@ git clone https://github.com/ba1ma0/chrome_extension.git
 Chrome->扩展程序->加载已解压的扩展程序
 ## 第三步
 扩展程序->背景页
+
+## 遇到问题？
+cyber-security@qq.com
